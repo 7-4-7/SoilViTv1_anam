@@ -1,0 +1,12 @@
+ {
+  "model_comparison": {
+    "ViT": {
+      "f1_score": 1.0000,
+      "optimal_threshold": 0.1
+    },
+    "TinyVGG": {
+      "min_f1_score": 0.9823,
+      "optimal_threshold":0.001
+    }
+  }
+}

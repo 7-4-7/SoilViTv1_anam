@@ -1,0 +1,11 @@
+torch==2.7.0+cu118
+torchvision==0.22.0
+pandas==2.2.3
+numpy==2.2.6
+matplotlib==3.10.3
+scikit-learn==1.6.1
+pillow==11.2.1
+tqdm==4.67.1
+jupyter
+kaggle
+torchinfo

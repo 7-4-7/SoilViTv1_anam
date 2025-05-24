@@ -1,0 +1,4 @@
+venv
+soil_competition-2025
+__pycache__
+vit_model_state_dict.pth
