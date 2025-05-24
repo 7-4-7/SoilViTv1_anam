@@ -9,3 +9,4 @@ tqdm==4.67.1
 jupyter
 kaggle
 torchinfo
+seaborn

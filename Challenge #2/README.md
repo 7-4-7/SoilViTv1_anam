@@ -5,20 +5,21 @@ This project addresses a binary classification task: identifying whether an imag
 ## Folder Structure
 
 ```
-├── /src/                     
-|     └── models.py          # Contains tinvgg
-├── /models/
-│   ├── tinyvgg_model_state_dict.ipynb       # Training and feature extraction logic
-│   └── vit_model_state_dict.ipynb      # Evaluation and visualization  
-├── /docs/
-│   ├── architecture.png     # Model architecture diagram
-|   ├── 2_tinyvgg.png
-|   ├── 2_vit.png
+Challenge #2/
+├── src/
+│   └── essentials.py            # Contains Class definations
+├── models/
+│   ├── tinyvgg_model_state_dict.ipynb   # TinyVGG training and feature extraction
+│   └── vit_model_state_dict.ipynb       # ViT evaluation and visualization
+├── docs/
+│   ├── architecture.png         # General model architecture diagram
+│   ├── 2_tinyvgg.png            # TinyVGG architecture visualization
+│   ├── 2_vit.png                # ViT architecture visualization
 │   └── cards/
-│       ├── project-card.ipynb
-│       └── ml-metrics.json  # Evaluation metrics
-├── /data/
-│   └── download.sh          # Dataset download instructions (optional)
+│       ├── project-card.ipynb   # Notebook for evaluation and reporting
+│       └── ml-metrics.json      # Evaluation metrics
+├── data/
+│   └── download.sh              # Dataset download instructions (optional)
 ├── requirements.txt
 └── README.md
 ```
@@ -28,16 +29,16 @@ This project addresses a binary classification task: identifying whether an imag
 The goal is to build a classifier that determines whether a given image contains soil. Only positive class (soil) embeddings are used as a reference. Test embeddings are compared to these references, and predictions are made based on a distance threshold.
 
 ### Key Challenges
-- Binary classification with one data
+- Binary classification with limited positive data
 - Threshold optimization for cosine similarity
 - Embedding-based classification approach
 
 ## Approach
 
-1. **Feature Extraction**: Extract embeddings using a pretrained ViT or TinyVGG model
-2. **Similarity Computation**: Compute cosine similarity between test embeddings and reference (soil) embeddings
-3. **Threshold Classification**: Classify based on a chosen threshold value
-4. **Model Comparison**: Compare results across both models to evaluate performance differences
+1. **Feature Extraction:** Extract embeddings using a pretrained ViT or TinyVGG model
+2. **Similarity Computation:** Compute cosine similarity between test embeddings and reference (soil) embeddings
+3. **Threshold Classification:** Classify based on a chosen threshold value
+4. **Model Comparison:** Compare results across both models to evaluate performance differences
 
 ### Classification Pipeline
 ```
@@ -47,18 +48,18 @@ Input Image → Feature Extraction → Embedding Vector → Cosine Similarity �
 ## Model Architectures
 
 ### Vision Transformer (ViT)
-- **Base Model**: ViT-Base pretrained on ImageNet-1k
-- **Input Size**: 224x224 pixels
-- **Embedding Dimension**: 1000
-- **Advantages**: Strong feature representation, good generalization
+- **Base Model:** ViT-Base pretrained on ImageNet-1k
+- **Input Size:** 224x224 pixels
+- **Embedding Dimension:** 1000
+- **Advantages:** Strong feature representation, good generalization
 
 ### TinyVGG
-- **Architecture**: Lightweight CNN with 2 convolutional blocks
-- **Input Size**: 224x224 pixels  
-- **Embedding Dimension**: 33160
-- **Advantages**: Fast inference, lower computational requirements
+- **Architecture:** Lightweight CNN with 2 convolutional blocks
+- **Input Size:** 224x224 pixels  
+- **Embedding Dimension:** 33160
+- **Advantages:** Fast inference, lower computational requirements
 
-Architecture visualization is provided in `/docs/architecture.png`.
+Architecture visualizations are provided in `docs/architecture.png`, `docs/2_tinyvgg.png`, and `docs/2_vit.png`.
 
 ---
 
@@ -68,7 +69,7 @@ Architecture visualization is provided in `/docs/architecture.png`.
 
 ```bash
 git clone <repository-url>
-cd soil-classification
+cd "Challenge #2"
 ```
 
 ### 2. Install dependencies
@@ -77,30 +78,14 @@ cd soil-classification
 pip install -r requirements.txt
 ```
 
-### 3. Download Kaggle Dataset
+### 3. Download the dataset
 
-#### a. Get your Kaggle API key
-
-- Go to [Kaggle Account Settings](https://www.kaggle.com/settings)
-- Scroll to the **API** section and click **Create New API Token**
-- This will download a file called `kaggle.json`
-
-#### b. Place `kaggle.json` in the correct location
-
-- Move `kaggle.json` to your user folder:
-  - **Windows:** `C:\Users\<YourUsername>\.kaggle\kaggle.json`
-  - **Linux/Mac:** `/home/<YourUsername>/.kaggle/kaggle.json`
-
-#### c. Download the data
-
-From the project root, run:
-
+If a script is provided:
 ```bash
 cd data
 bash download.sh
 ```
-
-This will download and unzip the competition data into `data/soil_competition-2025/`.
+Or manually place the dataset as required by the notebooks.
 
 ---
 
@@ -116,11 +101,11 @@ All evaluation and analysis is performed in the notebook:
 
    - The notebook will:
      - Load the pretrained model weights from `/models/`
-     - Load the dataset from `/data/soil_competition-2025/`
+     - Load the dataset from `/data/`
      - Perform evaluation and show results/metrics
 
 **Note:**  
-There are no training or inference scripts. All evaluation is performed using the provided notebook and pretrained weights from Challenge #1.
+There are no standalone training or inference scripts. All evaluation is performed using the provided notebook and pretrained weights.
 
 ---
 
@@ -133,21 +118,21 @@ Current model performance metrics are stored in `/docs/cards/ml-metrics.json`:
   "model_comparison": {
     "ViT": {
       "f1_score": 1.0000,
-      "optimal_threshold":0.1
+      "optimal_threshold": 0.1
     },
     "TinyVGG": {
       "min_f1_score": 0.9823,
-      "optimal_threshold":0.001
+      "optimal_threshold": 0.001
     }
   }
 }
 ```
 
 ### Performance Summary
-- **Best Model**: Vision Transformer (ViT)
-- **F1 Score**: 1.0
-- **Accuracy**: 98%
-- **Optimal Threshold**: 0.1
+- **Best Model:** Vision Transformer (ViT)
+- **F1 Score:** 1.0
+- **Accuracy:** 98%
+- **Optimal Threshold:** 0.1
 
 ---
 
@@ -183,6 +168,7 @@ Use Cases:
   - Construction site monitoring
   - Environmental research
 ```
+
 ### TinyVGG Model Card
 ```yaml
 Model Name: Soil Classification TinyVGG
@@ -205,7 +191,7 @@ Confusion Matrix:
      [0, 46, 1, 0],
      [1, 0, 36, 0],
      [0, 0, 0, 62]]
-  - Note : This model was only trained on jpeg type images
+  - Note: This model was only trained on jpeg type images
 Limitations:
   - Slightly lower accuracy than ViT, especially for Class 2
   - May struggle with complex soil textures
@@ -215,21 +201,18 @@ Use Cases:
   - Resource-constrained environments
 ```
 
+---
 
 ## Results and Analysis
 
 ### Key Findings
-1. **ViT outperforms TinyVGG** in all metrics but requires more computational resources
-2. **Optimal thresholds differ** between models (0.1 for ViT, 0.001 for TinyVGG)
-3. **Cosine similarity approach** works well for this embedding-based classification
-4. **Minimum F1 scores** (ViT: 1.000, TinyVGG: 0.9825) ViT better
+1. **ViT outperforms TinyVGG** in all metrics but requires more computational resources.
+2. **Optimal thresholds differ** between models (0.1 for ViT, 0.001 for TinyVGG).
+3. **Cosine similarity approach** works well for this embedding-based classification.
+4. **Minimum F1 scores** (ViT: 1.000, TinyVGG: 0.9825) show ViT is better.
 
-
-
+---
 
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
