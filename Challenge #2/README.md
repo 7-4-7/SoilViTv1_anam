@@ -7,7 +7,8 @@ This project addresses a binary classification task: identifying whether an imag
 ```
 Challenge #2/
 ├── src/
-│   └── essentials.py            # Contains Class definations
+│   └── essentials.py       # Contains Class definations
+│   └── __init__.py         
 ├── models/
 │   ├── tinyvgg_model_state_dict.ipynb   # TinyVGG training and feature extraction
 │   └── vit_model_state_dict.ipynb       # ViT evaluation and visualization
