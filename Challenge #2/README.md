@@ -32,9 +32,8 @@ Challenge #2/
 The goal is to build a classifier that determines whether a given image contains soil. Only positive class (soil) embeddings are used as a reference. Test embeddings are compared to these references, and predictions are made based on a distance threshold.
 
 ### Key Challenges
-- Binary classification with limited positive data
+- Binary classification only positive data
 - Threshold optimization for cosine similarity
-- Embedding-based classification approach
 
 ## Approach
 
