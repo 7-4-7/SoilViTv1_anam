@@ -2,6 +2,9 @@
 
 Welcome !!!!!
 
+NOTE : Downloads and setup has been included in both of the README.md. Kindly look into that.
+NOTE : In challenge 2 I haven't done any training, was not required in my approach. In place of /Notebooks I have uploaded the two model.pth files using github lfs
+
 ##  Challenges Overview
 
 ###  Challenge #1: Multiclass Soil Type Classification
@@ -31,4 +34,4 @@ This is a **binary classification** task with limited labeled data. The focus is
  [Read More (Challenge 2)](./Challenge%20%232/README.md)
 
 ---
-Note - Downloads and setup has been included in both of the README.md. Kindly look into that.
+
