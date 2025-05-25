@@ -19,7 +19,8 @@ Challenge #2/
 │       ├── project-card.ipynb   # Notebook for evaluation and reporting
 │       └── ml-metrics.json      # Evaluation metrics
 ├── data/
-│   └── download.sh              # Dataset download instructions (optional)
+│   └── download.sh
+├── requirements.txt          # Dataset download instructions (optional)
 └── README.md
 ```
 
