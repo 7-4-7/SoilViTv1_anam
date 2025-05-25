@@ -20,7 +20,6 @@ Challenge #2/
 │       └── ml-metrics.json      # Evaluation metrics
 ├── data/
 │   └── download.sh              # Dataset download instructions (optional)
-├── requirements.txt
 └── README.md
 ```
 
