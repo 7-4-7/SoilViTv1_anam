@@ -15,6 +15,8 @@ Challenge #2/
 │   ├── architecture.png         # General model architecture diagram
 │   ├── 2_tinyvgg.png            # TinyVGG architecture visualization
 │   ├── 2_vit.png                # ViT architecture visualization
+│   ├── architecture-cnn.png     # CNN visualizer
+│   ├── architecture-vit.png     #Vit visualizer
 │   └── cards/
 │       ├── project-card.ipynb   # Notebook for evaluation and reporting
 │       └── ml-metrics.json      # Evaluation metrics
