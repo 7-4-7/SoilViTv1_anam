@@ -211,8 +211,4 @@ Use Cases:
 3. **Cosine similarity approach** works well for this embedding-based classification.
 4. **Minimum F1 scores** (ViT: 1.000, TinyVGG: 0.9825) show ViT is better.
 
----
 
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
