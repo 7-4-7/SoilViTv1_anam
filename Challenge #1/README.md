@@ -124,9 +124,6 @@ data/
 ### Training the Model
 
 1. **Open the training notebook:**
-   ```bash
-   jupyter notebook notebooks/training.ipynb
-   ```
 
 2. **Run all cells to:**
    - Load and preprocess the soil classification dataset
@@ -143,9 +140,6 @@ data/
 ### Running Inference
 
 1. **Open the inference notebook:**
-   ```bash
-   jupyter notebook notebooks/inferencing.ipynb
-   ```
 
 2. **Run all cells to:**
    - Load the pre-trained model
