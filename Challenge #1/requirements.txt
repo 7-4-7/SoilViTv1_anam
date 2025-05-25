@@ -1,0 +1,16 @@
+# PyTorch with CUDA 11.8 (latest stable release)
+torch==2.2.2+cu118
+torchvision==0.17.2+cu118
+torchaudio==2.2.2+cu118
+--extra-index-url https://download.pytorch.org/whl/cu118
+
+# Core dependencies
+pandas==2.2.3
+numpy==1.26.4
+matplotlib==3.10.3
+scikit-learn==1.6.1
+pillow==11.2.1
+tqdm==4.67.1
+kaggle==1.6.6
+torchinfo
+seaborn==0.13.2
