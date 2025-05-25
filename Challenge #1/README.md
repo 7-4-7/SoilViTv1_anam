@@ -24,28 +24,40 @@ Challenge #1/
 
 ## Setup
 
-1. **Clone the repository**
+NOTE : Please ensure you are working in a  venv before going through steps
+
+0. **Clone the repository**
    ```bash
    git clone <repository-url>
    cd "Challenge #1"
    ```
 
-2. **Install dependencies:**
+1. **Install dependencies:**
    ```bash
    pip install -r requirements.txt
    ```
-   Additional requirements (if not in requirements.txt):
-   - torch
-   - torchvision
-   - torchview
-   - pandas
-   - scikit-learn
-   - matplotlib
-   - seaborn
-   - tqdm
-   - Pillow
 
-3. **Download the dataset:**
+2. ## 2. Set up Kaggle API token
+
+To download the dataset, you need a Kaggle API token:
+
+1. Go to your Kaggle account: [https://www.kaggle.com/account](https://www.kaggle.com/account)  
+2. Scroll to the **API** section and click **Create New API Token**  
+3. This will download a file named `kaggle.json`
+
+---
+
+## 3. Place the Kaggle token and set permissions
+
+### On Git Bash / Linux / macOS
+
+```bash
+mkdir -p ~/.kaggle
+cp /path/to/kaggle.json ~/.kaggle/kaggle.json
+chmod 600 ~/.kaggle/kaggle.json
+```
+
+4. **Download the dataset:**
    - If a script is provided:
      ```bash
      cd data
@@ -53,8 +65,6 @@ Challenge #1/
      ```
    - Or manually place the dataset in `data/data/soil_classification-2025/` as required by the notebooks.
 
-4. **(Optional) For model architecture visualization:**
-   - Install [Graphviz](https://graphviz.gitlab.io/download/) and add its `bin` directory to your system PATH.
 
 ## Usage
 
