@@ -6,6 +6,8 @@ NOTE : Downloads and setup has been included in both of the README.md. Kindly lo
 
 NOTE : In challenge 2 I haven't done any training, was not required in my approach. In place of /Notebooks I have uploaded the two model.pth files using github lfs
 
+NOTE : Requirement.txt is in Challenge 2 directory common for both challenges
+
 ##  Challenges Overview
 
 ###  Challenge #1: Multiclass Soil Type Classification
