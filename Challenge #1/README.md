@@ -21,7 +21,6 @@ Challenge #1/
 │   └── essentials.py                       # Essential functions and utilities
 ├── requirements.txt                        # Python dependencies
 ├── README.md                              # This file
-└── LICENSE                                # MIT License
 ```
 
 ##  Quick Start
