@@ -30,7 +30,7 @@ This is a **multiclass classification** problem. The dataset consists of labeled
 Detect the **is the image is soil image or not** of a particular soil condition or characteristic from **single-label image data**.
 
 **Details:**  
-This is a **binary classification** task with only single labeled dataset. The focus is on improving generalization from sparse labels.
+This is a **binary classification** task with only single labeled dataset. 
 
  [Read More (Challenge 2)](./Challenge%20%232/README.md)
 
