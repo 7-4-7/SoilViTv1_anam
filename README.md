@@ -4,7 +4,7 @@ Welcome !!!!!
 
 NOTE : Downloads and setup processes have been included in both of the README.md in their respective challenge number directories. Kindly look into that.
 
-NOTE : In challenge 2 I haven't done any training, was not required in my approach. In place of /Notebooks I have uploaded the two model.pth files using github lfs under /models folder
+NOTE : In challenge 2 I haven't done any training, was not required in my approach. In place of /Notebooks I have uploaded the two model.pth files using **github lfs** under /models folder
 
 ##  Challenges Overview
 
