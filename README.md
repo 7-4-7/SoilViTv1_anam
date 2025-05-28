@@ -1,5 +1,6 @@
 # Annam AI Hackathon
 
+\ Status - Selected for main phase \
 Welcome !!!!!
 
 NOTE : Downloads and setup processes have been included in both of the README.md in their respective challenge number directories. Kindly look into that.
